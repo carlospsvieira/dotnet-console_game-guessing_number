@@ -33,7 +33,7 @@ public class GuessNumber
     }
 
     //2 - Receba a entrada da pessoa usuária e converta para Int
-    //5 - Adicione um limite de tentativas
+    //5 - Adicione um limite de tentativas.
     public string ChooseNumber(string userEntry)
     {
         throw new NotImplementedException();
