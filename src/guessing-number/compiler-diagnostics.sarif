@@ -21,9 +21,9 @@
                 "uri": "file:///home/carlos/trybe/csharp/csharp-026-csharp-exercicio-adivinhe-o-numero/src/guessing-number/GuessingGame.cs",
                 "region": {
                   "startLine": 30,
-                  "startColumn": 19,
+                  "startColumn": 17,
                   "endLine": 30,
-                  "endColumn": 24
+                  "endColumn": 22
                 }
               }
             }
