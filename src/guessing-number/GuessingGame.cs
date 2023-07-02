@@ -36,8 +36,17 @@ public class GuessNumber
   //5 - Adicione um limite de tentativas.
   public string ChooseNumber(string userEntry)
   {
+
+    currentAttempts += 1;
+    
+    if (currentAttempts > 5)
+    {
+      return "Você excedeu o número máximo de tentativas! Tente novamente.";
+    }
+    
     if (!int.TryParse(userEntry, out int number))
     {
+
       return "Entrada inválida! Não é um número.";
     }
 
@@ -49,6 +58,7 @@ public class GuessNumber
 
     userValue = number;
     return "Número escolhido!";
+
   }
 
   //3 - Gere um número aleatório
