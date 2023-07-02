@@ -22,7 +22,7 @@ public class GuessNumber
   public int maxAttempts = 5;
   public int currentAttempts;
 
-  public int difficultyLevel;
+  public int difficultyLevel = 1;
 
   public bool gameOver;
 
@@ -36,7 +36,7 @@ public class GuessNumber
   //5 - Adicione um limite de tentativas.
   public string ChooseNumber(string userEntry)
   {
-    
+
     currentAttempts += 1;
 
     if (currentAttempts > maxAttempts)
@@ -72,7 +72,15 @@ public class GuessNumber
   //6 - Adicione níveis de dificuldade
   public string RandomNumberWithDifficult()
   {
-    throw new NotImplementedException();
+    switch (difficultyLevel)
+    {
+      case 2:
+        return "A máquina escolheu um número de -500 à 500!";
+      case 3:
+        return "A máquina escolheu um número de -1000 à 1000!";
+      default:
+        return "A máquina escolheu um número de -100 à 100!";
+    }
   }
 
   //4 - Verifique a resposta da jogada
