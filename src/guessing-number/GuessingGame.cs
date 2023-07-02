@@ -24,7 +24,7 @@ public class GuessNumber
 
   public int difficultyLevel = 1;
 
-  public bool gameOver;
+  public bool gameOver = false;
 
   //1 - Imprima uma mensagem de saudação
   public string Greet()
@@ -58,6 +58,7 @@ public class GuessNumber
     }
 
     userValue = number;
+    gameOver = true;
     return "Número escolhido!";
 
   }
@@ -86,6 +87,11 @@ public class GuessNumber
   //4 - Verifique a resposta da jogada
   public string AnalyzePlay()
   {
+    if (gameOver == true)
+    {
+      return "O jogo terminou. Deseja jogar novamente?";
+    }
+
     if (userValue < randomValue)
     {
       return "Tente um número MAIOR";
@@ -98,12 +104,16 @@ public class GuessNumber
     {
       return "ACERTOU!";
     }
-
   }
 
   //7 - Adicione uma opção para reiniciar o jogo
   public void RestartGame()
   {
-    throw new NotImplementedException();
+    userValue = 0;
+    randomValue = 0;
+    currentAttempts = 0;
+    difficultyLevel = 1;
+    maxAttempts = 5;
+    gameOver = false;
   }
 }
